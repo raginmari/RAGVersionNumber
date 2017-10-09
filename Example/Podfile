@@ -1,0 +1,6 @@
+use_frameworks!
+target 'RAGVersionNumber_Tests' do
+  pod 'RAGVersionNumber', :path => '../'
+  
+  
+end
