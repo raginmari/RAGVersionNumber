@@ -1,0 +1,22 @@
+{
+  "name": "RAGVersionNumber",
+  "version": "0.1.0",
+  "summary": "A short description of RAGVersionNumber.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Reimar Twelker/RAGVersionNumber",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Reimar Twelker": "reimar.twelker@web.de"
+  },
+  "source": {
+    "git": "https://github.com/Reimar Twelker/RAGVersionNumber.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RAGVersionNumber/Classes/**/*"
+}

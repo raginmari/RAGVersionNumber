@@ -1,0 +1,6 @@
+framework module RAGVersionNumber {
+  umbrella header "RAGVersionNumber-umbrella.h"
+
+  export *
+  module * { export * }
+}

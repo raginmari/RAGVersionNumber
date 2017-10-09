@@ -12,11 +12,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00EC263066AFE8CB72F84BBF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		16CFA418D56620A89771F1AD /* RAGVersionNumber.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RAGVersionNumber.podspec; path = ../RAGVersionNumber.podspec; sourceTree = "<group>"; };
+		00EC263066AFE8CB72F84BBF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		16CFA418D56620A89771F1AD /* RAGVersionNumber.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RAGVersionNumber.podspec; path = ../RAGVersionNumber.podspec; sourceTree = "<group>"; };
 		172A4ED6B99057BE6AE05CEE /* Pods-RAGVersionNumber_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAGVersionNumber_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAGVersionNumber_Tests/Pods-RAGVersionNumber_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2F8A53083E6C6C67BF1699A0 /* Pods-RAGVersionNumber_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAGVersionNumber_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAGVersionNumber_Tests/Pods-RAGVersionNumber_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		40A5B75E4E3FF633887EBC0F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		40A5B75E4E3FF633887EBC0F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* RAGVersionNumber_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RAGVersionNumber_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -131,13 +131,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = C39PL3C95R;
+						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -339,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F8A53083E6C6C67BF1699A0 /* Pods-RAGVersionNumber_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C39PL3C95R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -348,11 +346,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -360,16 +359,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 172A4ED6B99057BE6AE05CEE /* Pods-RAGVersionNumber_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C39PL3C95R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
