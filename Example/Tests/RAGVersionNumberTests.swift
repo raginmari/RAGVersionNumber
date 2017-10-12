@@ -66,7 +66,7 @@ class RAGVersionNumberTests: XCTestCase {
         XCTAssertEqual(versionNumber?.minorVersion, 2)
         XCTAssertEqual(versionNumber?.patchVersion, 3)
     }
-        
+    
     func test_BundleInitializerReturnsNilIfInfoDictionaryIsNil() {
         struct TestBundle: RAGInfoDictionaryProviding {
             
@@ -133,5 +133,89 @@ class RAGVersionNumberTests: XCTestCase {
         let v1 = VersionNumber(string: "1.2.3")!
         let v2 = VersionNumber(string: "1.2.2")!
         XCTAssertFalse(v1 < v2)
+    }
+    
+    func test_IsPatchSuccessor() {
+        let v1 = VersionNumber(string: "1.2.2")!
+        let v2 = VersionNumber(string: "1.2.3")!
+        XCTAssertTrue(v2.isPatchSuccessor(of: v1))
+        
+        let v3 = VersionNumber(string: "1.2.10")!
+        XCTAssertTrue(v3.isPatchSuccessor(of: v1))
+    }
+    
+    func test_IsPatchSuccessorWithEqualVersion() {
+        let v1 = VersionNumber(string: "1.2.2")!
+        let v2 = VersionNumber(string: "1.2.2")!
+        XCTAssertFalse(v2.isPatchSuccessor(of: v1))
+    }
+    
+    func test_IsPatchSuccessorWithPatchPredecessorVersion() {
+        let v1 = VersionNumber(string: "1.2.3")!
+        let v2 = VersionNumber(string: "1.2.2")!
+        XCTAssertFalse(v2.isPatchSuccessor(of: v1))
+    }
+    
+    func test_IsPatchSuccessorWithMinorSuccessorVersion() {
+        let v1 = VersionNumber(string: "1.2.1")!
+        let v2 = VersionNumber(string: "1.3.2")!
+        XCTAssertFalse(v2.isPatchSuccessor(of: v1))
+    }
+    
+    func test_IsPatchSuccessorWithMajorSuccessorVersion() {
+        let v1 = VersionNumber(string: "1.2.1")!
+        let v2 = VersionNumber(string: "2.2.2")!
+        XCTAssertFalse(v2.isPatchSuccessor(of: v1))
+    }
+    
+    func test_IsMinorSuccessor() {
+        let v1 = VersionNumber(string: "1.2.2")!
+        let v2 = VersionNumber(string: "1.3.2")!
+        XCTAssertTrue(v2.isMinorSuccessor(of: v1))
+        
+        let v3 = VersionNumber(string: "1.3")!
+        XCTAssertTrue(v3.isMinorSuccessor(of: v1))
+        
+        let v4 = VersionNumber(string: "1.10.0")!
+        XCTAssertTrue(v4.isMinorSuccessor(of: v1))
+    }
+    
+    func test_IsMinorSuccessorWithEqualVersion() {
+        let v1 = VersionNumber(string: "1.2.2")!
+        let v2 = VersionNumber(string: "1.2.2")!
+        XCTAssertFalse(v2.isMinorSuccessor(of: v1))
+    }
+    
+    func test_IsMinorSuccessorWithMinorPredecessorVersion() {
+        let v1 = VersionNumber(string: "1.2.2")!
+        let v2 = VersionNumber(string: "1.1.2")!
+        XCTAssertFalse(v2.isMinorSuccessor(of: v1))
+    }
+    
+    func test_IsMinorSuccessorWithMajorSuccessor() {
+        let v1 = VersionNumber(string: "1.2.2")!
+        let v2 = VersionNumber(string: "2.3.2")!
+        XCTAssertFalse(v2.isMinorSuccessor(of: v1))
+    }
+    
+    func test_IsMajorSuccessor() {
+        let v1 = VersionNumber(string: "1.0.0")!
+        let v2 = VersionNumber(string: "2.0.0")!
+        XCTAssertTrue(v2.isMajorSuccessor(of: v1))
+        
+        let v3 = VersionNumber(string: "10.0.0")!
+        XCTAssertTrue(v3.isMajorSuccessor(of: v1))
+    }
+    
+    func test_IsMajorSuccessorWithEqualVersion() {
+        let v1 = VersionNumber(string: "1.0.0")!
+        let v2 = VersionNumber(string: "1.0.0")!
+        XCTAssertFalse(v2.isMajorSuccessor(of: v1))
+    }
+    
+    func test_IsMajorSuccessorWithMajorPredecessorVersion() {
+        let v1 = VersionNumber(string: "2.0.0")!
+        let v2 = VersionNumber(string: "1.0.0")!
+        XCTAssertFalse(v2.isMajorSuccessor(of: v1))
     }
 }

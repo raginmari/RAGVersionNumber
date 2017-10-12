@@ -91,6 +91,30 @@ extension VersionNumber: Comparable {
     }
 }
 
+extension VersionNumber {
+    
+    public func isPatchSuccessor(of otherVersionNumber: VersionNumber) -> Bool {
+        guard otherVersionNumber.majorVersion == majorVersion else { return false }
+        guard otherVersionNumber.minorVersion == minorVersion else { return false }
+        let result = otherVersionNumber.patchVersion < patchVersion
+        
+        return result
+    }
+    
+    public func isMinorSuccessor(of otherVersionNumber: VersionNumber) -> Bool {
+        guard otherVersionNumber.majorVersion == majorVersion else { return false }
+        let result = minorVersion > otherVersionNumber.minorVersion
+        
+        return result
+    }
+    
+    public func isMajorSuccessor(of otherVersionNumber: VersionNumber) -> Bool {
+        let result = majorVersion > otherVersionNumber.majorVersion
+        
+        return result
+    }
+}
+
 private extension String {
     
     func removingCharactersNotInSet(_ characterSet: CharacterSet) -> String {
