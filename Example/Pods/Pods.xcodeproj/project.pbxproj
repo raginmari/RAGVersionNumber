@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		103144171DCC71D65E1B8D81CEED19BD /* RAGVersionNumber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0FBA5ABBC48D8D40C1A47C28F474DB /* RAGVersionNumber-dummy.m */; };
+		0FDFE1EB1D689B1080409ACC54A5FB7F /* RAGAppStoreVersionNumberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C88A9F54623DBB8DFB5D3F37B86F4 /* RAGAppStoreVersionNumberRequest.swift */; };
 		656C13AEB88133EC0F764AC6EB800B94 /* Pods-RAGVersionNumber_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C034FFE790BF4BF75B9CA7177B3CF4 /* Pods-RAGVersionNumber_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E7801B75C841A49EFD3FF75C7369D1B /* RAGVersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00713441E66D16B948341916E398341F /* RAGVersionNumber.swift */; };
 		937B2909E40AE190DE9FCE67466541CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		952184BA63EF794E179E2ED37643AA65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		993DFF9B0CEAE3D0CC6C385CFDEDF695 /* Pods-RAGVersionNumber_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349BAE580E850DC51BCE915B3E84A46 /* Pods-RAGVersionNumber_Tests-dummy.m */; };
-		C067BD9978F3B535D6E20E83AB4CF95D /* RAGVersionNumber-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 293F689BE368DF174B8AB474C6EE6791 /* RAGVersionNumber-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4800BF0D3F4E84C441B683F0AD1AE21 /* RAGVersionNumber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9708EA0568313CD53AE70CDE15973B48 /* RAGVersionNumber-dummy.m */; };
+		B16B0C24846A5D4DE761E1057022C7D7 /* RAGAppStoreLookupResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700628E033949BBBCE03A574E67DA73 /* RAGAppStoreLookupResultParser.swift */; };
+		C067BD9978F3B535D6E20E83AB4CF95D /* RAGVersionNumber-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBD4236A1A24BC38F0D444FC83CFB1D /* RAGVersionNumber-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F91E8FF511E820A136EA1F5F774AD3D4 /* RAGVersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AEBCC3227DE7C4F5256001239C53 /* RAGVersionNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,27 +29,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00713441E66D16B948341916E398341F /* RAGVersionNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAGVersionNumber.swift; path = RAGVersionNumber/Classes/RAGVersionNumber.swift; sourceTree = "<group>"; };
 		01D3628E2D6DA6DEC37A9A48AD03029C /* Pods-RAGVersionNumber_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RAGVersionNumber_Tests-resources.sh"; sourceTree = "<group>"; };
 		0349BAE580E850DC51BCE915B3E84A46 /* Pods-RAGVersionNumber_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RAGVersionNumber_Tests-dummy.m"; sourceTree = "<group>"; };
 		06B0B373C3479FEBB591E252169D9F94 /* Pods-RAGVersionNumber_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RAGVersionNumber_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		18A0C012250D54A79593C2155D4F752D /* RAGVersionNumber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-prefix.pch"; sourceTree = "<group>"; };
-		293F689BE368DF174B8AB474C6EE6791 /* RAGVersionNumber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-umbrella.h"; sourceTree = "<group>"; };
-		3C0FBA5ABBC48D8D40C1A47C28F474DB /* RAGVersionNumber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAGVersionNumber-dummy.m"; sourceTree = "<group>"; };
+		0B3C88A9F54623DBB8DFB5D3F37B86F4 /* RAGAppStoreVersionNumberRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAGAppStoreVersionNumberRequest.swift; path = RAGVersionNumber/Classes/RAGAppStoreVersionNumberRequest.swift; sourceTree = "<group>"; };
+		10E7AEBCC3227DE7C4F5256001239C53 /* RAGVersionNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAGVersionNumber.swift; path = RAGVersionNumber/Classes/RAGVersionNumber.swift; sourceTree = "<group>"; };
+		1BBD4236A1A24BC38F0D444FC83CFB1D /* RAGVersionNumber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-umbrella.h"; sourceTree = "<group>"; };
+		506C904C8D37024E514BFA7C50444D5F /* RAGVersionNumber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-prefix.pch"; sourceTree = "<group>"; };
 		5DC0C36ED962C3741CF4D4DCB6FD0912 /* Pods_RAGVersionNumber_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RAGVersionNumber_Tests.framework; path = "Pods-RAGVersionNumber_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		646C1DC01A6A1F1AA90463BE4EFB4919 /* Pods-RAGVersionNumber_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RAGVersionNumber_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		64F703BA44BA929D2B78D9965AD8C6A1 /* RAGVersionNumber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RAGVersionNumber.modulemap; sourceTree = "<group>"; };
 		65C034FFE790BF4BF75B9CA7177B3CF4 /* Pods-RAGVersionNumber_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RAGVersionNumber_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7F25B37E648F384B2AE4BB6E2EDB44D7 /* Pods-RAGVersionNumber_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RAGVersionNumber_Tests.modulemap"; sourceTree = "<group>"; };
+		8C8EAE4AFF89E4479017FDBF07963604 /* RAGVersionNumber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RAGVersionNumber.modulemap; sourceTree = "<group>"; };
+		8D895BD1EA7396D02A96E4CF01D164D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9644FF647BE2425D49B7A9CFE1DA56D3 /* Pods-RAGVersionNumber_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RAGVersionNumber_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		96CE96DA0FC5A8F8E42FD8940CD87B7B /* Pods-RAGVersionNumber_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RAGVersionNumber_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9700628E033949BBBCE03A574E67DA73 /* RAGAppStoreLookupResultParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAGAppStoreLookupResultParser.swift; path = RAGVersionNumber/Classes/RAGAppStoreLookupResultParser.swift; sourceTree = "<group>"; };
+		9708EA0568313CD53AE70CDE15973B48 /* RAGVersionNumber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAGVersionNumber-dummy.m"; sourceTree = "<group>"; };
 		973C544D9CB2814C07B00398CB252C62 /* Pods-RAGVersionNumber_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RAGVersionNumber_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9F4D7C4EE0B9634EE8DD400009BB83E4 /* RAGVersionNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RAGVersionNumber.framework; path = RAGVersionNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86D8CBB2767B2A96F325C519F072BB9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF9B9B90B727660C03BDC8A72CD1CF6E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2654D296297A823995C37965FFEB2A9 /* RAGVersionNumber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RAGVersionNumber.xcconfig; sourceTree = "<group>"; };
+		FB39D985529BEE6688B6BEC97B5DDD83 /* RAGVersionNumber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RAGVersionNumber.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,24 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13C4F13BD0860BD481158BA14A480C28 /* RAGVersionNumber */ = {
-			isa = PBXGroup;
-			children = (
-				00713441E66D16B948341916E398341F /* RAGVersionNumber.swift */,
-				DE6672ECB99CC6B98AA10C2F53046A2E /* Support Files */,
-			);
-			name = RAGVersionNumber;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		3ED2CA45F86490F759A0F5DA4179231A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				13C4F13BD0860BD481158BA14A480C28 /* RAGVersionNumber */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		41B9031D09045CB4A2CDB336524B7D40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,15 +109,37 @@
 			path = "Target Support Files/Pods-RAGVersionNumber_Tests";
 			sourceTree = "<group>";
 		};
+		74932297A03A1D8E778775BB4E1D6375 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7049961B6CA0A2DD46A4B8DF874EC /* RAGVersionNumber */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3ED2CA45F86490F759A0F5DA4179231A /* Development Pods */,
+				74932297A03A1D8E778775BB4E1D6375 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				41B9031D09045CB4A2CDB336524B7D40 /* Products */,
 				58A92217BF980F028F430F70E244B796 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9E56C7B9E4B5889CD82F7CFBB3C56841 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D895BD1EA7396D02A96E4CF01D164D9 /* Info.plist */,
+				8C8EAE4AFF89E4479017FDBF07963604 /* RAGVersionNumber.modulemap */,
+				FB39D985529BEE6688B6BEC97B5DDD83 /* RAGVersionNumber.xcconfig */,
+				9708EA0568313CD53AE70CDE15973B48 /* RAGVersionNumber-dummy.m */,
+				506C904C8D37024E514BFA7C50444D5F /* RAGVersionNumber-prefix.pch */,
+				1BBD4236A1A24BC38F0D444FC83CFB1D /* RAGVersionNumber-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RAGVersionNumber";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -150,18 +158,16 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DE6672ECB99CC6B98AA10C2F53046A2E /* Support Files */ = {
+		E8B7049961B6CA0A2DD46A4B8DF874EC /* RAGVersionNumber */ = {
 			isa = PBXGroup;
 			children = (
-				BF9B9B90B727660C03BDC8A72CD1CF6E /* Info.plist */,
-				64F703BA44BA929D2B78D9965AD8C6A1 /* RAGVersionNumber.modulemap */,
-				E2654D296297A823995C37965FFEB2A9 /* RAGVersionNumber.xcconfig */,
-				3C0FBA5ABBC48D8D40C1A47C28F474DB /* RAGVersionNumber-dummy.m */,
-				18A0C012250D54A79593C2155D4F752D /* RAGVersionNumber-prefix.pch */,
-				293F689BE368DF174B8AB474C6EE6791 /* RAGVersionNumber-umbrella.h */,
+				9700628E033949BBBCE03A574E67DA73 /* RAGAppStoreLookupResultParser.swift */,
+				0B3C88A9F54623DBB8DFB5D3F37B86F4 /* RAGAppStoreVersionNumberRequest.swift */,
+				10E7AEBCC3227DE7C4F5256001239C53 /* RAGVersionNumber.swift */,
+				9E56C7B9E4B5889CD82F7CFBB3C56841 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/RAGVersionNumber";
+			name = RAGVersionNumber;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 091DEA47AF3704C6E8D29808BC114C3A /* Build configuration list for PBXNativeTarget "RAGVersionNumber" */;
 			buildPhases = (
-				65FD59B9500D8EF645649515DE2629A7 /* Sources */,
+				3BC7A5317607E9634DD9035E9A7909C6 /* Sources */,
 				F9C5CD9524A41A0427F6DDC75CE57B92 /* Frameworks */,
 				37C3CD64729FD38695C4D5F047B9F3E3 /* Headers */,
 			);
@@ -249,20 +255,22 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3BC7A5317607E9634DD9035E9A7909C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B16B0C24846A5D4DE761E1057022C7D7 /* RAGAppStoreLookupResultParser.swift in Sources */,
+				0FDFE1EB1D689B1080409ACC54A5FB7F /* RAGAppStoreVersionNumberRequest.swift in Sources */,
+				A4800BF0D3F4E84C441B683F0AD1AE21 /* RAGVersionNumber-dummy.m in Sources */,
+				F91E8FF511E820A136EA1F5F774AD3D4 /* RAGVersionNumber.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43445684BA0973BF0C98CF7B7BE94EC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				993DFF9B0CEAE3D0CC6C385CFDEDF695 /* Pods-RAGVersionNumber_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65FD59B9500D8EF645649515DE2629A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				103144171DCC71D65E1B8D81CEED19BD /* RAGVersionNumber-dummy.m in Sources */,
-				6E7801B75C841A49EFD3FF75C7369D1B /* RAGVersionNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +322,7 @@
 		};
 		4D32CE8480609A24CD1FF974B7E19585 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2654D296297A823995C37965FFEB2A9 /* RAGVersionNumber.xcconfig */;
+			baseConfigurationReference = FB39D985529BEE6688B6BEC97B5DDD83 /* RAGVersionNumber.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -400,7 +408,7 @@
 		};
 		7763FAFA8BC787EA74C6BB2C75C61BF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2654D296297A823995C37965FFEB2A9 /* RAGVersionNumber.xcconfig */;
+			baseConfigurationReference = FB39D985529BEE6688B6BEC97B5DDD83 /* RAGVersionNumber.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
