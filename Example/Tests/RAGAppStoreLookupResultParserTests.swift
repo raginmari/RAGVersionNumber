@@ -20,46 +20,46 @@ class RAGAppStoreLookupResultParserTests: XCTestCase {
     }
     
     func test_parseEmptyJSONThrowsUnsupportedFormatError() {
+        let sut = RAGAppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.empty)
-        let sut = RAGAppStoreLookupResultParser(jsonObject: json)
         
-        XCTAssertThrowsError(try sut.parseVersionString()) { (error) in
+        XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
             XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.unsupportedFormat)
         }
     }
     
     func test_parseJSONMissingResultCountAttributeThrowsUnsupportedFormatError() {
+        let sut = RAGAppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.missingResultCount)
-        let sut = RAGAppStoreLookupResultParser(jsonObject: json)
         
-        XCTAssertThrowsError(try sut.parseVersionString()) { (error) in
+        XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
             XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.unsupportedFormat)
         }
     }
     
     func test_parseJSONMissingResultsAttributeThrowsUnsupportedFormatError() {
+        let sut = RAGAppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.missingResults)
-        let sut = RAGAppStoreLookupResultParser(jsonObject: json)
         
-        XCTAssertThrowsError(try sut.parseVersionString()) { (error) in
+        XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
             XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.unsupportedFormat)
         }
     }
     
     func test_parseJSONWithNoResultsThrowsNotFoundError() {
+        let sut = RAGAppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.noResults)
-        let sut = RAGAppStoreLookupResultParser(jsonObject: json)
         
-        XCTAssertThrowsError(try sut.parseVersionString()) { (error) in
+        XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
             XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.notFound)
         }
     }
     
     func test_parseJSONWithMoreThanOneResultThrowsNotUniqueError() {
+        let sut = RAGAppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.tooManyResults)
-        let sut = RAGAppStoreLookupResultParser(jsonObject: json)
         
-        XCTAssertThrowsError(try sut.parseVersionString()) { (error) in
+        XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
             XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.notUnique)
         }
     }
@@ -73,12 +73,13 @@ class RAGAppStoreLookupResultParserTests: XCTestCase {
             "1.1.4"
         ]
         
+        let sut = RAGAppStoreLookupResultParser()
+        
         for expectedVersionString in versionStrings {
             let jsonString = String(format: jsonFormat, expectedVersionString)
             let json = makeJSONObject(string: jsonString)
-            let sut = RAGAppStoreLookupResultParser(jsonObject: json)
             
-            let versionString = try? sut.parseVersionString()
+            let versionString = try? sut.parseVersionString(fromJSON: json)
             XCTAssertEqual(versionString, expectedVersionString)
         }
     }

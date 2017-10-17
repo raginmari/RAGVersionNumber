@@ -22,11 +22,9 @@ enum RAGAppStoreLookupError: Error {
     case unsupportedFormat
 }
 
-protocol RAGAppStoreLookupResultParsing {
+public protocol RAGAppStoreLookupResultParsing {
     
-    init(jsonObject: RAGJSONObject)
-    
-    func parseVersionString() throws -> String
+    func parseVersionString(fromJSON: [String: Any]) throws -> String
 }
 
 class RAGAppStoreLookupResultParser: RAGAppStoreLookupResultParsing {
@@ -38,13 +36,7 @@ class RAGAppStoreLookupResultParser: RAGAppStoreLookupResultParsing {
         static let version = "version"
     }
     
-    let jsonObject: RAGJSONObject
-    
-    required init(jsonObject: RAGJSONObject) {
-        self.jsonObject = jsonObject
-    }
-    
-    func parseVersionString() throws -> String {
+    func parseVersionString(fromJSON jsonObject: [String: Any]) throws -> String {
         guard !jsonObject.isEmpty else {
             throw RAGAppStoreLookupError.unsupportedFormat
         }
