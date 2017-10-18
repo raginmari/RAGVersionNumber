@@ -37,6 +37,12 @@ class RAGAppStoreVersionNumberLookupTests: XCTestCase {
         let expectedURL = URL.appStoreLookupURL(bundleIdentifier: "com.example.test", appStoreCountryCode: "de")
         XCTAssertEqual(session.dataTaskRequest?.url!, expectedURL)
     }
+    
+    func test_PerformLookupStartsDataTask() {
+        _ = sut.performLookup(withBundleIdentifier: "com.example.test", appStoreCountryCode: "de") { _ in }
+        
+        XCTAssertTrue(session.dataTask.resumeWasCalled)
+    }
 }
 
 private class MockParser: RAGAppStoreLookupResultParsing {
@@ -52,24 +58,23 @@ private class MockParser: RAGAppStoreLookupResultParsing {
 
 private class MockSession: RAGURLSessionProtocol {
     
-    var dataTaskWasCalled = false
     var dataTaskRequest: URLRequest? = nil
     var dataTaskResultData: Data? = nil
     var dataTaskResultURLResponse: URLResponse? = nil
     var dataTaskResultError: Error? = nil
+    var dataTask = MockDataTask()
     
     func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> RAGURLSessionDataTaskProtocol {
-        dataTaskWasCalled = true
         dataTaskRequest = request
         
-        // Mock completion of the request
+        // Defer completion of the request
         DispatchQueue.main.async {
             completionHandler(self.dataTaskResultData,
                               self.dataTaskResultURLResponse,
                               self.dataTaskResultError)
         }
         
-        return MockDataTask()
+        return dataTask
     }
 }
 
