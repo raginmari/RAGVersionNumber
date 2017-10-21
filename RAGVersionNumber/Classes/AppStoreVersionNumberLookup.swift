@@ -1,5 +1,5 @@
 //
-//  RAGAppStoreVersionNumberLookup.swift
+//  AppStoreVersionNumberLookup.swift
 //  Pods
 //
 //  Created by Reimar Twelker on 12.10.17.
@@ -9,30 +9,30 @@
 import Foundation
 
 // Define protocol for URLSession
-public protocol RAGURLSessionProtocol {
+public protocol URLSessionProtocol {
     
-    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> RAGURLSessionDataTaskProtocol
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
 }
 
 // Make URLSession conform to the protocol
-extension URLSession: RAGURLSessionProtocol {
+extension URLSession: URLSessionProtocol {
 
-    public func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> RAGURLSessionDataTaskProtocol {
+    public func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         let result = dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
-        return result as RAGURLSessionDataTaskProtocol
+        return result as URLSessionDataTaskProtocol
     }
 }
 
 // Define protocol for URLSessionDataTask
-public protocol RAGURLSessionDataTaskProtocol {
+public protocol URLSessionDataTaskProtocol {
     
     func resume()
 }
 
 // Make URLSessionDataTask conform to the protocol
-extension URLSessionDataTask: RAGURLSessionDataTaskProtocol {}
+extension URLSessionDataTask: URLSessionDataTaskProtocol {}
 
-public class RAGAppStoreVersionNumberLookup {
+public class AppStoreVersionNumberLookup {
     
     public enum Error: Swift.Error {
         case internalInconsistency
@@ -41,10 +41,10 @@ public class RAGAppStoreVersionNumberLookup {
         case general
     }
     
-    private let parser: RAGAppStoreLookupResultParsing
-    private let session: RAGURLSessionProtocol
+    private let parser: AppStoreLookupResultParsing
+    private let session: URLSessionProtocol
     
-    public init(parser: RAGAppStoreLookupResultParsing, session: RAGURLSessionProtocol? = nil) {
+    public init(parser: AppStoreLookupResultParsing, session: URLSessionProtocol? = nil) {
         self.parser = parser
         self.session = session ?? URLSession(configuration: URLSessionConfiguration.ephemeral)
     }

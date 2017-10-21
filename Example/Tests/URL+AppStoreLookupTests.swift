@@ -1,5 +1,5 @@
 //
-//  URL+RAGAppStoreLookupTests.swift
+//  URL+AppStoreLookupTests.swift
 //  RAGVersionNumber
 //
 //  Created by Reimar Twelker on 15.10.17.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RAGVersionNumber
 
-class URL_RAGAppStoreLookupTests: XCTestCase {
+class URL_AppStoreLookupTests: XCTestCase {
     
     func test_AppStoreLookupURL() {
         let url = URL.appStoreLookupURL(bundleIdentifier: "com.example.test", appStoreCountryCode: "de")

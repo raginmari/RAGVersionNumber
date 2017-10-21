@@ -1,5 +1,5 @@
 //
-//  RAGVersionNumber.swift
+//  VersionNumber.swift
 //  Pods
 //
 //  Created by Reimar Twelker on 09.10.17.
@@ -54,16 +54,16 @@ public struct VersionNumber {
     }
 }
 
-public protocol RAGInfoDictionaryProviding {
+public protocol InfoDictionaryProviding {
     
     var infoDictionary: [String: Any]? { get }
 }
 
-extension Bundle: RAGInfoDictionaryProviding {}
+extension Bundle: InfoDictionaryProviding {}
 
 extension VersionNumber {
     
-    public init?(bundle: RAGInfoDictionaryProviding) {
+    public init?(bundle: InfoDictionaryProviding) {
         guard let infoDictionary = bundle.infoDictionary else { return nil }
         
         guard let appVersionString = infoDictionary["CFBundleShortVersionString"] as? String else {

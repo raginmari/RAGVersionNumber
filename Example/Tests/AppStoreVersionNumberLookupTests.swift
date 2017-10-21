@@ -1,5 +1,5 @@
 //
-//  RAGAppStoreVersionNumberLookupTests.swift
+//  AppStoreVersionNumberLookupTests.swift
 //  RAGVersionNumber
 //
 //  Created by Reimar Twelker on 16.10.17.
@@ -9,9 +9,9 @@
 import XCTest
 @testable import RAGVersionNumber
 
-class RAGAppStoreVersionNumberLookupTests: XCTestCase {
+class AppStoreVersionNumberLookupTests: XCTestCase {
     
-    private var sut: RAGAppStoreVersionNumberLookup!
+    private var sut: AppStoreVersionNumberLookup!
     private var parser: MockParser!
     private var session: MockSession!
     
@@ -20,7 +20,7 @@ class RAGAppStoreVersionNumberLookupTests: XCTestCase {
      
         parser = MockParser()
         session = MockSession()
-        sut = RAGAppStoreVersionNumberLookup(parser: parser, session: session)
+        sut = AppStoreVersionNumberLookup(parser: parser, session: session)
     }
     
     override func tearDown() {
@@ -45,7 +45,7 @@ class RAGAppStoreVersionNumberLookupTests: XCTestCase {
     }
 }
 
-private class MockParser: RAGAppStoreLookupResultParsing {
+private class MockParser: AppStoreLookupResultParsing {
     
     var parseVersionStringError: Error? = nil
     var parseVersionStringResult = ""
@@ -56,7 +56,7 @@ private class MockParser: RAGAppStoreLookupResultParsing {
     }
 }
 
-private class MockSession: RAGURLSessionProtocol {
+private class MockSession: URLSessionProtocol {
     
     var dataTaskRequest: URLRequest? = nil
     var dataTaskResultData: Data? = nil
@@ -64,7 +64,7 @@ private class MockSession: RAGURLSessionProtocol {
     var dataTaskResultError: Error? = nil
     var dataTask = MockDataTask()
     
-    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> RAGURLSessionDataTaskProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         dataTaskRequest = request
         
         // Defer completion of the request
@@ -78,7 +78,7 @@ private class MockSession: RAGURLSessionProtocol {
     }
 }
 
-private class MockDataTask: RAGURLSessionDataTaskProtocol {
+private class MockDataTask: URLSessionDataTaskProtocol {
     
     var resumeWasCalled = false
     

@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FDFE1EB1D689B1080409ACC54A5FB7F /* RAGAppStoreVersionNumberLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C88A9F54623DBB8DFB5D3F37B86F4 /* RAGAppStoreVersionNumberLookup.swift */; };
+		0FDFE1EB1D689B1080409ACC54A5FB7F /* AppStoreVersionNumberLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */; };
 		656C13AEB88133EC0F764AC6EB800B94 /* Pods-RAGVersionNumber_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C034FFE790BF4BF75B9CA7177B3CF4 /* Pods-RAGVersionNumber_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		937B2909E40AE190DE9FCE67466541CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		952184BA63EF794E179E2ED37643AA65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		993DFF9B0CEAE3D0CC6C385CFDEDF695 /* Pods-RAGVersionNumber_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349BAE580E850DC51BCE915B3E84A46 /* Pods-RAGVersionNumber_Tests-dummy.m */; };
 		A4800BF0D3F4E84C441B683F0AD1AE21 /* RAGVersionNumber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9708EA0568313CD53AE70CDE15973B48 /* RAGVersionNumber-dummy.m */; };
-		B16B0C24846A5D4DE761E1057022C7D7 /* RAGAppStoreLookupResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700628E033949BBBCE03A574E67DA73 /* RAGAppStoreLookupResultParser.swift */; };
-		BFF1AD301F93A19200A9EBF2 /* URL+RAGAppStoreLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD2F1F93A19200A9EBF2 /* URL+RAGAppStoreLookup.swift */; };
+		B16B0C24846A5D4DE761E1057022C7D7 /* AppStoreLookupResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */; };
+		BFF1AD301F93A19200A9EBF2 /* URL+AppStoreLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */; };
 		C067BD9978F3B535D6E20E83AB4CF95D /* RAGVersionNumber-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBD4236A1A24BC38F0D444FC83CFB1D /* RAGVersionNumber-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F91E8FF511E820A136EA1F5F774AD3D4 /* RAGVersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AEBCC3227DE7C4F5256001239C53 /* RAGVersionNumber.swift */; };
+		F91E8FF511E820A136EA1F5F774AD3D4 /* VersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +33,8 @@
 		01D3628E2D6DA6DEC37A9A48AD03029C /* Pods-RAGVersionNumber_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RAGVersionNumber_Tests-resources.sh"; sourceTree = "<group>"; };
 		0349BAE580E850DC51BCE915B3E84A46 /* Pods-RAGVersionNumber_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RAGVersionNumber_Tests-dummy.m"; sourceTree = "<group>"; };
 		06B0B373C3479FEBB591E252169D9F94 /* Pods-RAGVersionNumber_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RAGVersionNumber_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0B3C88A9F54623DBB8DFB5D3F37B86F4 /* RAGAppStoreVersionNumberLookup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAGAppStoreVersionNumberLookup.swift; path = RAGVersionNumber/Classes/RAGAppStoreVersionNumberLookup.swift; sourceTree = "<group>"; };
-		10E7AEBCC3227DE7C4F5256001239C53 /* RAGVersionNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAGVersionNumber.swift; path = RAGVersionNumber/Classes/RAGVersionNumber.swift; sourceTree = "<group>"; };
+		0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppStoreVersionNumberLookup.swift; path = RAGVersionNumber/Classes/AppStoreVersionNumberLookup.swift; sourceTree = "<group>"; };
+		10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionNumber.swift; path = RAGVersionNumber/Classes/VersionNumber.swift; sourceTree = "<group>"; };
 		1BBD4236A1A24BC38F0D444FC83CFB1D /* RAGVersionNumber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-umbrella.h"; sourceTree = "<group>"; };
 		506C904C8D37024E514BFA7C50444D5F /* RAGVersionNumber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-prefix.pch"; sourceTree = "<group>"; };
 		5DC0C36ED962C3741CF4D4DCB6FD0912 /* Pods_RAGVersionNumber_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAGVersionNumber_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,12 +47,12 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9644FF647BE2425D49B7A9CFE1DA56D3 /* Pods-RAGVersionNumber_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RAGVersionNumber_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		96CE96DA0FC5A8F8E42FD8940CD87B7B /* Pods-RAGVersionNumber_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RAGVersionNumber_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9700628E033949BBBCE03A574E67DA73 /* RAGAppStoreLookupResultParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAGAppStoreLookupResultParser.swift; path = RAGVersionNumber/Classes/RAGAppStoreLookupResultParser.swift; sourceTree = "<group>"; };
+		9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppStoreLookupResultParser.swift; path = RAGVersionNumber/Classes/AppStoreLookupResultParser.swift; sourceTree = "<group>"; };
 		9708EA0568313CD53AE70CDE15973B48 /* RAGVersionNumber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAGVersionNumber-dummy.m"; sourceTree = "<group>"; };
 		973C544D9CB2814C07B00398CB252C62 /* Pods-RAGVersionNumber_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RAGVersionNumber_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9F4D7C4EE0B9634EE8DD400009BB83E4 /* RAGVersionNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RAGVersionNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86D8CBB2767B2A96F325C519F072BB9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFF1AD2F1F93A19200A9EBF2 /* URL+RAGAppStoreLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+RAGAppStoreLookup.swift"; sourceTree = "<group>"; };
+		BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+AppStoreLookup.swift"; sourceTree = "<group>"; };
 		FB39D985529BEE6688B6BEC97B5DDD83 /* RAGVersionNumber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RAGVersionNumber.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,11 +163,11 @@
 		E8B7049961B6CA0A2DD46A4B8DF874EC /* RAGVersionNumber */ = {
 			isa = PBXGroup;
 			children = (
-				9700628E033949BBBCE03A574E67DA73 /* RAGAppStoreLookupResultParser.swift */,
-				0B3C88A9F54623DBB8DFB5D3F37B86F4 /* RAGAppStoreVersionNumberLookup.swift */,
-				10E7AEBCC3227DE7C4F5256001239C53 /* RAGVersionNumber.swift */,
+				9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */,
+				0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */,
+				10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */,
 				9E56C7B9E4B5889CD82F7CFBB3C56841 /* Support Files */,
-				BFF1AD2F1F93A19200A9EBF2 /* URL+RAGAppStoreLookup.swift */,
+				BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */,
 			);
 			name = RAGVersionNumber;
 			path = ../..;
@@ -267,11 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF1AD301F93A19200A9EBF2 /* URL+RAGAppStoreLookup.swift in Sources */,
-				B16B0C24846A5D4DE761E1057022C7D7 /* RAGAppStoreLookupResultParser.swift in Sources */,
-				0FDFE1EB1D689B1080409ACC54A5FB7F /* RAGAppStoreVersionNumberLookup.swift in Sources */,
+				BFF1AD301F93A19200A9EBF2 /* URL+AppStoreLookup.swift in Sources */,
+				B16B0C24846A5D4DE761E1057022C7D7 /* AppStoreLookupResultParser.swift in Sources */,
+				0FDFE1EB1D689B1080409ACC54A5FB7F /* AppStoreVersionNumberLookup.swift in Sources */,
 				A4800BF0D3F4E84C441B683F0AD1AE21 /* RAGVersionNumber-dummy.m in Sources */,
-				F91E8FF511E820A136EA1F5F774AD3D4 /* RAGVersionNumber.swift in Sources */,
+				F91E8FF511E820A136EA1F5F774AD3D4 /* VersionNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

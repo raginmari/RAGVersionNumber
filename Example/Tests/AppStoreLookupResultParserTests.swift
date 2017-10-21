@@ -1,5 +1,5 @@
 //
-//  RAGAppStoreLookupResultParserTests.swift
+//  AppStoreLookupResultParserTests.swift
 //  RAGVersionNumber
 //
 //  Created by Reimar Twelker on 14.10.17.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RAGVersionNumber
 
-class RAGAppStoreLookupResultParserTests: XCTestCase {
+class AppStoreLookupResultParserTests: XCTestCase {
     
     private enum JSONStrings {
         static let empty = "{}"
@@ -20,47 +20,47 @@ class RAGAppStoreLookupResultParserTests: XCTestCase {
     }
     
     func test_parseEmptyJSONThrowsUnsupportedFormatError() {
-        let sut = RAGAppStoreLookupResultParser()
+        let sut = AppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.empty)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.unsupportedFormat)
+            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.unsupportedFormat)
         }
     }
     
     func test_parseJSONMissingResultCountAttributeThrowsUnsupportedFormatError() {
-        let sut = RAGAppStoreLookupResultParser()
+        let sut = AppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.missingResultCount)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.unsupportedFormat)
+            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.unsupportedFormat)
         }
     }
     
     func test_parseJSONMissingResultsAttributeThrowsUnsupportedFormatError() {
-        let sut = RAGAppStoreLookupResultParser()
+        let sut = AppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.missingResults)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.unsupportedFormat)
+            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.unsupportedFormat)
         }
     }
     
     func test_parseJSONWithNoResultsThrowsNotFoundError() {
-        let sut = RAGAppStoreLookupResultParser()
+        let sut = AppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.noResults)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.notFound)
+            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.notFound)
         }
     }
     
     func test_parseJSONWithMoreThanOneResultThrowsNotUniqueError() {
-        let sut = RAGAppStoreLookupResultParser()
+        let sut = AppStoreLookupResultParser()
         let json = makeJSONObject(string: JSONStrings.tooManyResults)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? RAGAppStoreLookupError, RAGAppStoreLookupError.notUnique)
+            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.notUnique)
         }
     }
     
@@ -73,7 +73,7 @@ class RAGAppStoreLookupResultParserTests: XCTestCase {
             "1.1.4"
         ]
         
-        let sut = RAGAppStoreLookupResultParser()
+        let sut = AppStoreLookupResultParser()
         
         for expectedVersionString in versionStrings {
             let jsonString = String(format: jsonFormat, expectedVersionString)
@@ -84,9 +84,9 @@ class RAGAppStoreLookupResultParserTests: XCTestCase {
         }
     }
     
-    private func makeJSONObject(string: String) -> RAGJSONObject {
+    private func makeJSONObject(string: String) -> JSONObject {
         let data = string.data(using: .utf8)!
-        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! RAGJSONObject
+        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! JSONObject
         
         return json
     }

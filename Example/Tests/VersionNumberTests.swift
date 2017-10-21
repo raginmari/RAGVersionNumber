@@ -2,7 +2,7 @@ import UIKit
 import XCTest
 import RAGVersionNumber
 
-class RAGVersionNumberTests: XCTestCase {
+class VersionNumberTests: XCTestCase {
     
     func test_Initializer() {
         let versionNumber = VersionNumber(majorVersion: 1, minorVersion: 2, patchVersion: 3)
@@ -68,7 +68,7 @@ class RAGVersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerReturnsNilIfInfoDictionaryIsNil() {
-        struct TestBundle: RAGInfoDictionaryProviding {
+        struct TestBundle: InfoDictionaryProviding {
             
             var infoDictionary: [String : Any]? = nil
         }
@@ -78,7 +78,7 @@ class RAGVersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerReturnsNilIfInfoDictionaryDoesNotContainCFBundleShortVersionString() {
-        struct TestBundle: RAGInfoDictionaryProviding {
+        struct TestBundle: InfoDictionaryProviding {
             
             var infoDictionary: [String : Any]? = [:]
         }
@@ -88,7 +88,7 @@ class RAGVersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerReturnsValueIfInfoDictionaryContainsCFBundleShortVersionString() {
-        struct TestBundle: RAGInfoDictionaryProviding {
+        struct TestBundle: InfoDictionaryProviding {
             
             var infoDictionary: [String : Any]? = ["CFBundleShortVersionString": "1.2.3"]
         }
@@ -98,7 +98,7 @@ class RAGVersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerParsesCFBundleShortVersionString() {
-        struct TestBundle: RAGInfoDictionaryProviding {
+        struct TestBundle: InfoDictionaryProviding {
             
             var infoDictionary: [String : Any]? = ["CFBundleShortVersionString": "1.2.3"]
         }

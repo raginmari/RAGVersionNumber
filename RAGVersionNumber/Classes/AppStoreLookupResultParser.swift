@@ -1,5 +1,5 @@
 //
-//  RAGAppStoreLookupResultParser.swift
+//  AppStoreLookupResultParser.swift
 //  Pods
 //
 //  Created by Reimar Twelker on 12.10.17.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias RAGJSONObject = [String: Any]
+typealias JSONObject = [String: Any]
 
-enum RAGAppStoreLookupError: Error {
+enum AppStoreLookupError: Error {
     
     /// The lookup result has no results or an empty array of results
     case notFound
@@ -22,12 +22,12 @@ enum RAGAppStoreLookupError: Error {
     case unsupportedFormat
 }
 
-public protocol RAGAppStoreLookupResultParsing {
+public protocol AppStoreLookupResultParsing {
     
     func parseVersionString(fromJSON: [String: Any]) throws -> String
 }
 
-class RAGAppStoreLookupResultParser: RAGAppStoreLookupResultParsing {
+class AppStoreLookupResultParser: AppStoreLookupResultParsing {
     
     private enum JSONKeys {
         
@@ -38,28 +38,28 @@ class RAGAppStoreLookupResultParser: RAGAppStoreLookupResultParsing {
     
     func parseVersionString(fromJSON jsonObject: [String: Any]) throws -> String {
         guard !jsonObject.isEmpty else {
-            throw RAGAppStoreLookupError.unsupportedFormat
+            throw AppStoreLookupError.unsupportedFormat
         }
         
         guard let numberOfResults = jsonObject[JSONKeys.resultCount] as? NSNumber else {
-            throw RAGAppStoreLookupError.unsupportedFormat
+            throw AppStoreLookupError.unsupportedFormat
         }
         
-        guard let resultsArray = jsonObject[JSONKeys.results] as? Array<RAGJSONObject> else {
-            throw RAGAppStoreLookupError.unsupportedFormat
+        guard let resultsArray = jsonObject[JSONKeys.results] as? Array<JSONObject> else {
+            throw AppStoreLookupError.unsupportedFormat
         }
         
         guard numberOfResults.intValue > 0 else {
-            throw RAGAppStoreLookupError.notFound
+            throw AppStoreLookupError.notFound
         }
         
         guard numberOfResults.intValue < 2 else {
-            throw RAGAppStoreLookupError.notUnique
+            throw AppStoreLookupError.notUnique
         }
         
         let result = resultsArray[0];
         guard let versionString = result[JSONKeys.version] as? String else {
-            throw RAGAppStoreLookupError.unsupportedFormat
+            throw AppStoreLookupError.unsupportedFormat
         }
         
         return versionString

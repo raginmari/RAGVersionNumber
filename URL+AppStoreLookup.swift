@@ -1,5 +1,5 @@
 //
-//  URL+RAGAppStoreLookup.swift
+//  URL+AppStoreLookup.swift
 //  Pods
 //
 //  Created by Reimar Twelker on 15.10.17.
