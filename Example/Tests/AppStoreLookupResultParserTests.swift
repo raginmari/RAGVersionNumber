@@ -24,7 +24,7 @@ class AppStoreLookupResultParserTests: XCTestCase {
         let json = makeJSONObject(string: JSONStrings.empty)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.unsupportedFormat)
+            XCTAssertEqual(error as? AppStoreLookupResultParserError, AppStoreLookupResultParserError.unsupportedFormat)
         }
     }
     
@@ -33,7 +33,7 @@ class AppStoreLookupResultParserTests: XCTestCase {
         let json = makeJSONObject(string: JSONStrings.missingResultCount)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.unsupportedFormat)
+            XCTAssertEqual(error as? AppStoreLookupResultParserError, AppStoreLookupResultParserError.unsupportedFormat)
         }
     }
     
@@ -42,7 +42,7 @@ class AppStoreLookupResultParserTests: XCTestCase {
         let json = makeJSONObject(string: JSONStrings.missingResults)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.unsupportedFormat)
+            XCTAssertEqual(error as? AppStoreLookupResultParserError, AppStoreLookupResultParserError.unsupportedFormat)
         }
     }
     
@@ -51,7 +51,7 @@ class AppStoreLookupResultParserTests: XCTestCase {
         let json = makeJSONObject(string: JSONStrings.noResults)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.notFound)
+            XCTAssertEqual(error as? AppStoreLookupResultParserError, AppStoreLookupResultParserError.notFound)
         }
     }
     
@@ -60,7 +60,7 @@ class AppStoreLookupResultParserTests: XCTestCase {
         let json = makeJSONObject(string: JSONStrings.tooManyResults)
         
         XCTAssertThrowsError(try sut.parseVersionString(fromJSON: json)) { (error) in
-            XCTAssertEqual(error as? AppStoreLookupError, AppStoreLookupError.notUnique)
+            XCTAssertEqual(error as? AppStoreLookupResultParserError, AppStoreLookupResultParserError.notUnique)
         }
     }
     
