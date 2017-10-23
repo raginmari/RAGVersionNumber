@@ -79,7 +79,7 @@ public class AppStoreVersionNumberLookup {
             return
         }
         
-//        handleAppStoreLookupJSON(json, completion: completion)
+        handleAppStoreLookupJSON(json, completion: completion)
     }
     
     private func handleAppStoreLookupJSON(_ json: [String: Any], completion: @escaping (Result) -> Void) {
