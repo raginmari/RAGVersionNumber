@@ -35,8 +35,8 @@
 		01D3628E2D6DA6DEC37A9A48AD03029C /* Pods-RAGVersionNumber_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RAGVersionNumber_Tests-resources.sh"; sourceTree = "<group>"; };
 		0349BAE580E850DC51BCE915B3E84A46 /* Pods-RAGVersionNumber_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RAGVersionNumber_Tests-dummy.m"; sourceTree = "<group>"; };
 		06B0B373C3479FEBB591E252169D9F94 /* Pods-RAGVersionNumber_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RAGVersionNumber_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppStoreVersionNumberLookup.swift; path = RAGVersionNumber/Classes/AppStoreVersionNumberLookup.swift; sourceTree = "<group>"; };
-		10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VersionNumber.swift; path = RAGVersionNumber/Classes/VersionNumber.swift; sourceTree = "<group>"; };
+		0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppStoreVersionNumberLookup.swift; sourceTree = "<group>"; };
+		10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VersionNumber.swift; sourceTree = "<group>"; };
 		1BBD4236A1A24BC38F0D444FC83CFB1D /* RAGVersionNumber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-umbrella.h"; sourceTree = "<group>"; };
 		506C904C8D37024E514BFA7C50444D5F /* RAGVersionNumber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAGVersionNumber-prefix.pch"; sourceTree = "<group>"; };
 		5DC0C36ED962C3741CF4D4DCB6FD0912 /* Pods_RAGVersionNumber_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAGVersionNumber_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +49,7 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9644FF647BE2425D49B7A9CFE1DA56D3 /* Pods-RAGVersionNumber_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RAGVersionNumber_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		96CE96DA0FC5A8F8E42FD8940CD87B7B /* Pods-RAGVersionNumber_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RAGVersionNumber_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppStoreLookupResultParser.swift; path = RAGVersionNumber/Classes/AppStoreLookupResultParser.swift; sourceTree = "<group>"; };
+		9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppStoreLookupResultParser.swift; sourceTree = "<group>"; };
 		9708EA0568313CD53AE70CDE15973B48 /* RAGVersionNumber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAGVersionNumber-dummy.m"; sourceTree = "<group>"; };
 		973C544D9CB2814C07B00398CB252C62 /* Pods-RAGVersionNumber_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RAGVersionNumber_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9F4D7C4EE0B9634EE8DD400009BB83E4 /* RAGVersionNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RAGVersionNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +156,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BFF1AD3E1F9FCDF300A9EBF2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */,
+				0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */,
+				BFF1AD351F9BDE2900A9EBF2 /* Errors.swift */,
+				BFF1AD371F9BDE7900A9EBF2 /* TestSupport.swift */,
+				BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */,
+				10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */,
+			);
+			name = Source;
+			path = RAGVersionNumber/Classes;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,13 +181,8 @@
 		E8B7049961B6CA0A2DD46A4B8DF874EC /* RAGVersionNumber */ = {
 			isa = PBXGroup;
 			children = (
+				BFF1AD3E1F9FCDF300A9EBF2 /* Source */,
 				9E56C7B9E4B5889CD82F7CFBB3C56841 /* Support Files */,
-				9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */,
-				0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */,
-				BFF1AD351F9BDE2900A9EBF2 /* Errors.swift */,
-				BFF1AD371F9BDE7900A9EBF2 /* TestSupport.swift */,
-				BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */,
-				10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */,
 			);
 			name = RAGVersionNumber;
 			path = ../..;
