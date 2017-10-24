@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = 'RAGVersionNumber'
   s.version          = '1.0.0'
   s.summary          = 'Makes it easier to compare version numbers and create them from string.'
-  s.description      = 'Implements a type that represents a version number with major, minor and patch components. A version number can be created from string or from a given app bundle.'
+  s.description      = 'Implements a type that represents a version number with major, minor and patch components. Provides initializers from string and from application bundle. Version numbers can be compared in various ways. Written in Swift 3. Thoroughly tested.'
   s.homepage         = 'https://github.com/raginmari/RAGVersionNumber'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'raginmari' => 'reimar.twelker@web.de' }
