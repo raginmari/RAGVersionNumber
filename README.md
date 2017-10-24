@@ -22,7 +22,7 @@ pod 'RAGVersionNumber'
 
 ## Author
 
-Reimar Twelker, reimar.twelker@web.de
+raginmari, reimar.twelker@web.de
 
 ## License
 
