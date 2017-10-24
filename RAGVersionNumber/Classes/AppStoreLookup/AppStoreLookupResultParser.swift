@@ -12,6 +12,12 @@ typealias JSONObject = [String: Any]
 
 public protocol AppStoreLookupResultParsing {
     
+    
+    /// Parses a version string from the given iTunes lookup JSON object.
+    ///
+    /// - Parameter fromJSON: a JSON dictionary received from an iTunes lookup request
+    /// - Returns: the version string in the given JSON
+    /// - Throws: AppStoreLookupResultParserError if the JSON is of an unsupported format or the version string cannot be found
     func parseVersionString(fromJSON: [String: Any]) throws -> String
 }
 

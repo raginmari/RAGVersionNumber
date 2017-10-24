@@ -63,10 +63,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				607FACE91AFB9204008FA782 /* Supporting Files */,
 				BFF1AD2B1F929EE600A9EBF2 /* AppStoreLookupResultParserTests.swift */,
 				BFF1AD331F9546F600A9EBF2 /* AppStoreVersionNumberLookupTests.swift */,
 				607FACEB1AFB9204008FA782 /* VersionNumberTests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
 				BFF1AD311F93B0F000A9EBF2 /* URL+AppStoreLookupTests.swift */,
 			);
 			path = Tests;

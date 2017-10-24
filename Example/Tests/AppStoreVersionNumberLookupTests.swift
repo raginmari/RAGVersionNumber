@@ -228,7 +228,7 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
         
         let expectTheUnexpected = expectation(description: "Looks up Sketch Breaker version number")
         
-        liveLookup = AppStoreVersionNumberLookup(parser: AppStoreLookupResultParser())
+        liveLookup = AppStoreVersionNumberLookup()
         liveLookup.performLookup(withBundleIdentifier: bundleID) { (result) in
             if case let .versionNumber(versionNumber) = result {
                 // Current version is 1.5.0

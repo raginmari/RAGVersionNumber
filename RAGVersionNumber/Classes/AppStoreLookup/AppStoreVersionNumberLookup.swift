@@ -13,16 +13,33 @@ public class AppStoreVersionNumberLookup {
     private let parser: AppStoreLookupResultParsing
     private let session: URLSessionProtocol
     
-    public init(parser: AppStoreLookupResultParsing, session: URLSessionProtocol? = nil) {
+    /// Creates a lookup instance using the given parser and URL session.
+    ///
+    /// - Parameters:
+    ///   - parser: the parser used to parse the JSON response from the iTunes lookup request. Optional.
+    ///   - session: the URL session used to perform the iTunes lookup request. Optional.
+    public init(parser: AppStoreLookupResultParsing = AppStoreLookupResultParser(), session: URLSessionProtocol? = nil) {
         self.parser = parser
         self.session = session ?? URLSession(configuration: URLSessionConfiguration.ephemeral)
     }
     
+    /// Represents a result of a version number lookup call.
     public enum Result {
+        
+        /// A successful result associated with the requested version number
         case versionNumber(VersionNumber)
+        
+        /// A failure associated with an error
         case failure(Error)
     }
     
+    /// Asks the iTunes lookup API for the version number of the app with the given bundle ID. 
+    /// The given country code is passed as an additional parameter. Its default value is "us".
+    ///
+    /// - Parameters:
+    ///   - bundleIdentifier: the bundle ID of the app whose App Store version should be looked up
+    ///   - countryCode: the country code of the App Store that the request should be directed at
+    ///   - completion: receives the result of the request
     public func performLookup(withBundleIdentifier bundleIdentifier: String?, appStoreCountryCode countryCode: String = "us", completion: @escaping (Result) -> Void) {
         guard let bundleIdentifier = bundleIdentifier ?? readBundleIdentifier() else {
             completion(.failure(AppStoreVersionNumberLookupError.internalInconsistency))
