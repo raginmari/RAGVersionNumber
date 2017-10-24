@@ -68,7 +68,7 @@ class VersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerReturnsNilIfInfoDictionaryIsNil() {
-        struct TestBundle: InfoDictionaryProviding {
+        struct TestBundle: BundleProtocol {
             
             var infoDictionary: [String : Any]? = nil
         }
@@ -78,7 +78,7 @@ class VersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerReturnsNilIfInfoDictionaryDoesNotContainCFBundleShortVersionString() {
-        struct TestBundle: InfoDictionaryProviding {
+        struct TestBundle: BundleProtocol {
             
             var infoDictionary: [String : Any]? = [:]
         }
@@ -88,7 +88,7 @@ class VersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerReturnsValueIfInfoDictionaryContainsCFBundleShortVersionString() {
-        struct TestBundle: InfoDictionaryProviding {
+        struct TestBundle: BundleProtocol {
             
             var infoDictionary: [String : Any]? = ["CFBundleShortVersionString": "1.2.3"]
         }
@@ -98,7 +98,7 @@ class VersionNumberTests: XCTestCase {
     }
     
     func test_BundleInitializerParsesCFBundleShortVersionString() {
-        struct TestBundle: InfoDictionaryProviding {
+        struct TestBundle: BundleProtocol {
             
             var infoDictionary: [String : Any]? = ["CFBundleShortVersionString": "1.2.3"]
         }

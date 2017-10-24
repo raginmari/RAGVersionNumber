@@ -8,6 +8,15 @@
 
 import Foundation
 
+// Define a protocol for Bundle
+public protocol BundleProtocol {
+    
+    var infoDictionary: [String: Any]? { get }
+}
+
+// Make Bundle conform to the protocol
+extension Bundle: BundleProtocol {}
+
 // Define protocol for URLSession
 public protocol URLSessionProtocol {
     

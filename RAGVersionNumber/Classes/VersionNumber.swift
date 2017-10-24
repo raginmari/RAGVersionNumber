@@ -54,16 +54,9 @@ public struct VersionNumber {
     }
 }
 
-public protocol InfoDictionaryProviding {
-    
-    var infoDictionary: [String: Any]? { get }
-}
-
-extension Bundle: InfoDictionaryProviding {}
-
 extension VersionNumber {
     
-    public init?(bundle: InfoDictionaryProviding) {
+    public init?(bundle: BundleProtocol) {
         guard let infoDictionary = bundle.infoDictionary else { return nil }
         
         guard let appVersionString = infoDictionary["CFBundleShortVersionString"] as? String else {
