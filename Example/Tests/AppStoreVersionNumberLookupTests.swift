@@ -20,6 +20,8 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
     private var parser: MockParser!
     private var session: MockSession!
     
+    private var liveLookup: AppStoreVersionNumberLookup!
+    
     override func setUp() {
         super.setUp()
      
@@ -30,8 +32,9 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
     
     override func tearDown() {
         sut = nil
-        session = nil
         parser = nil
+        session = nil
+        liveLookup = nil
         
         super.tearDown()
     }
@@ -218,6 +221,24 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
         }
         
         waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_LookupSketchBreakerVersionNumber() {
+        let bundleID = "com.FDGEntertainment.SketchBreaker"
+        
+        let expectTheUnexpected = expectation(description: "Looks up Sketch Breaker version number")
+        
+        liveLookup = AppStoreVersionNumberLookup(parser: AppStoreLookupResultParser())
+        liveLookup.performLookup(withBundleIdentifier: bundleID) { (result) in
+            if case let .versionNumber(versionNumber) = result {
+                // Current version is 1.5.0
+                if versionNumber == VersionNumber(majorVersion: 1, minorVersion: 5, patchVersion: 0) {
+                    expectTheUnexpected.fulfill()
+                }
+            }
+        }
+        
+        waitForExpectations(timeout: 10, handler: nil)
     }
     
     private func makeResponseWithStatus200() -> URLResponse {
