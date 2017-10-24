@@ -159,15 +159,40 @@
 		BFF1AD3E1F9FCDF300A9EBF2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */,
-				0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */,
-				BFF1AD351F9BDE2900A9EBF2 /* Errors.swift */,
-				BFF1AD371F9BDE7900A9EBF2 /* TestSupport.swift */,
-				BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */,
+				BFF1AD401F9FCEE300A9EBF2 /* App Store Lookup */,
+				BFF1AD411F9FCF4B00A9EBF2 /* Extensions */,
+				BFF1AD3F1F9FCEDE00A9EBF2 /* Types */,
 				10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */,
 			);
 			name = Source;
 			path = RAGVersionNumber/Classes;
+			sourceTree = "<group>";
+		};
+		BFF1AD3F1F9FCEDE00A9EBF2 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1AD351F9BDE2900A9EBF2 /* Errors.swift */,
+				BFF1AD371F9BDE7900A9EBF2 /* TestSupport.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		BFF1AD401F9FCEE300A9EBF2 /* App Store Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */,
+				0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */,
+			);
+			name = "App Store Lookup";
+			path = AppStoreLookup;
+			sourceTree = "<group>";
+		};
+		BFF1AD411F9FCF4B00A9EBF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
