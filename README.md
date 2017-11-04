@@ -1,7 +1,7 @@
 # RAGVersionNumber
 
 [![CI Status](http://img.shields.io/travis/raginmari/RAGVersionNumber.svg?style=flat)](https://travis-ci.org/raginmari/RAGVersionNumber)
-[![Coverage Status](https://coveralls.io/repos/github/raginmari/RAGVersionNumber/badge.svg)](https://coveralls.io/github/raginmari/RAGVersionNumber)
+[![codecov](https://codecov.io/gh/raginmari/RAGVersionNumber/branch/master/graph/badge.svg)](https://codecov.io/gh/raginmari/RAGVersionNumber)
 [![Version](https://img.shields.io/cocoapods/v/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
 [![License](https://img.shields.io/cocoapods/l/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
 [![Platform](https://img.shields.io/cocoapods/p/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
