@@ -70,6 +70,18 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
         XCTAssertTrue(session.dataTask.resumeWasCalled)
     }
     
+    func test_PerformLookupReturnsErrorIfBundleIdentifierIsInvalid() {
+        let expectsError = expectation(description: "Returns error")
+        
+        // Note: the bundle identifier is passed as a parameter in the GET query to the iTunes lookup API
+        
+        sut.performLookup(withBundleIdentifier: "\n", appStoreCountryCode: "de") { result in
+            if case .failure = result { expectsError.fulfill() }
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
     func test_PerformLookupReturnsErrorIfResponseContainsError() {
         session.dataTaskResultError = TestError.any
         session.dataTaskResultResponse = nil
@@ -98,28 +110,35 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
-    func test_PerformLookupReturnsErrorIfResponseStatusIsNot200() {
-        let statusCodes = [
-            301, 302,
-            401, 404,
-            500, 503
-        ]
-        var expectations = [XCTestExpectation]()
-        
+    func test_PerformLookupMaps301ToError() {
         session.dataTaskResultError = nil
         session.dataTaskResultData = makeArbitraryResponseData()
         
-        statusCodes.forEach {
-            let url = URL(string: "com.example.test")!
-            let response = HTTPURLResponse(url: url, statusCode: $0, httpVersion: nil, headerFields: nil)
-            session.dataTaskResultResponse = response
-            
-            let expectsError = expectation(description: "Returns error")
-            expectations.append(expectsError)
-            
-            sut.performLookup(withBundleIdentifier: "com.example.test") { result in
-                if case .failure = result { expectsError.fulfill() }
-            }
+        let url = URL(string: "com.example.test")!
+        let response = HTTPURLResponse(url: url, statusCode: 301, httpVersion: nil, headerFields: nil)
+        session.dataTaskResultResponse = response
+        
+        let expectsError = expectation(description: "Returns error")
+        
+        sut.performLookup(withBundleIdentifier: "com.example.test") { result in
+            if case .failure = result { expectsError.fulfill() }
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_PerformLookupMaps302ToError() {
+        session.dataTaskResultError = nil
+        session.dataTaskResultData = makeArbitraryResponseData()
+        
+        let url = URL(string: "com.example.test")!
+        let response = HTTPURLResponse(url: url, statusCode: 302, httpVersion: nil, headerFields: nil)
+        session.dataTaskResultResponse = response
+        
+        let expectsError = expectation(description: "Returns error")
+        
+        sut.performLookup(withBundleIdentifier: "com.example.test") { result in
+            if case .failure = result { expectsError.fulfill() }
         }
         
         waitForExpectations(timeout: 1, handler: nil)
@@ -202,6 +221,20 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
+    func test_PerformLookupReturnsErrorIfResponseContainsInvalidVersionNumber() {
+        session.dataTaskResultError = nil
+        session.dataTaskResultResponse = makeResponseWithStatus200()
+        session.dataTaskResultData = makeResponseDataWithInvalidVersionNumber()
+        
+        let expectsError = expectation(description: "Returns error")
+        
+        sut.performLookup(withBundleIdentifier: "com.example.test") { result in
+            if case .failure = result { expectsError.fulfill() }
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
     func test_PerformLookupPassesThroughErrorsThrownByTheParser() {
         session.dataTaskResultError = nil
         session.dataTaskResultResponse = makeResponseWithStatus200()
@@ -271,6 +304,10 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
         let data = try! JSONSerialization.data(withJSONObject: json, options: [])
         
         return data
+    }
+    
+    private func makeResponseDataWithInvalidVersionNumber() -> Data {
+        return makeResponseData(versionNumberString: "invalid")
     }
     
     private func makeValidResponseData() -> Data {
