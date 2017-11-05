@@ -10,18 +10,11 @@ import Foundation
 
 public class AppStoreVersionNumberLookup {
     
-    private let parser: AppStoreLookupResultParsing
-    private let session: URLSessionProtocol
+    /// The session used to perform the iTunes lookup request
+    var session: URLSessionProtocol = URLSession(configuration: URLSessionConfiguration.ephemeral)
     
-    /// Creates a lookup instance using the given parser and URL session.
-    ///
-    /// - Parameters:
-    ///   - parser: the parser used to parse the JSON response from the iTunes lookup request. Optional.
-    ///   - session: the URL session used to perform the iTunes lookup request. Optional.
-    public init(parser: AppStoreLookupResultParsing = AppStoreLookupResultParser(), session: URLSessionProtocol? = nil) {
-        self.parser = parser
-        self.session = session ?? URLSession(configuration: URLSessionConfiguration.ephemeral)
-    }
+    /// The parser used to handle the response of the iTunes lookup request
+    var parser: AppStoreLookupResultParsing = AppStoreLookupResultParser()
     
     /// Represents a result of a version number lookup call.
     public enum Result {

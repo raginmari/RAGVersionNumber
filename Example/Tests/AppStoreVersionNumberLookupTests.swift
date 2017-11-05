@@ -25,9 +25,13 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
     override func setUp() {
         super.setUp()
      
-        parser = MockParser()
+        sut = AppStoreVersionNumberLookup()
+     
         session = MockSession()
-        sut = AppStoreVersionNumberLookup(parser: parser, session: session)
+        sut.session = session
+        
+        parser = MockParser()
+        sut.parser = parser
     }
     
     override func tearDown() {
@@ -37,6 +41,20 @@ class AppStoreVersionNumberLookupTests: XCTestCase {
         liveLookup = nil
         
         super.tearDown()
+    }
+    
+    func test_DefaultSessionIsOfExpectedType() {
+        let sut = AppStoreVersionNumberLookup()
+        
+        let session = sut.session
+        XCTAssertTrue(session is URLSession)
+    }
+    
+    func test_DefaultParserIsOfExpectedType() {
+        let sut = AppStoreVersionNumberLookup()
+        
+        let parser = sut.parser
+        XCTAssertTrue(parser is AppStoreLookupResultParser)
     }
     
     func test_PerformLookupRequestsExpectedURL() {
