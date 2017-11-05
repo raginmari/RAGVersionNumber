@@ -3,3 +3,6 @@ coverage:
     - "Example/*"
     - "Example/**/*"
     - "**/*Tests.swift"
+    - "../Example/*"
+    - "../Example/**/*"
+    - "../**/*Tests.swift"
