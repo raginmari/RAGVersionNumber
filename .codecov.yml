@@ -3,4 +3,4 @@ codecov:
 
 coverage:
   ignore:
-    - Example/**/*
+    - Example/*
