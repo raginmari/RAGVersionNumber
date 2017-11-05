@@ -1,8 +1,5 @@
 coverage:
   ignore:
     - "Example/*"
-    - "Example/**/*"
-    - "**/*Tests.swift"
-    - "../Example/*"
-    - "../Example/**/*"
-    - "../**/*Tests.swift"
+    - "Example/Tests/*"
+    
