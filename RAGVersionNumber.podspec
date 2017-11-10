@@ -8,5 +8,6 @@ Pod::Spec.new do |s|
   s.author           = { 'raginmari' => 'reimar.twelker@web.de' }
   s.source           = { :git => 'https://github.com/raginmari/RAGVersionNumber.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0.2' }
   s.source_files = 'RAGVersionNumber/Classes/**/*'
 end
