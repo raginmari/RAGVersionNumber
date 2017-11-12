@@ -15,6 +15,12 @@
 		A4800BF0D3F4E84C441B683F0AD1AE21 /* RAGVersionNumber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9708EA0568313CD53AE70CDE15973B48 /* RAGVersionNumber-dummy.m */; };
 		B16B0C24846A5D4DE761E1057022C7D7 /* AppStoreLookupResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */; };
 		BF0665AA1FB7D451009B82FA /* VersionNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0665A81FB7D451009B82FA /* VersionNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0665AE1FB7D4D7009B82FA /* AppStoreLookupResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700628E033949BBBCE03A574E67DA73 /* AppStoreLookupResultParser.swift */; };
+		BF0665AF1FB7D4D9009B82FA /* AppStoreVersionNumberLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C88A9F54623DBB8DFB5D3F37B86F4 /* AppStoreVersionNumberLookup.swift */; };
+		BF0665B01FB7D4DD009B82FA /* URL+AppStoreLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */; };
+		BF0665B11FB7D4E1009B82FA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD351F9BDE2900A9EBF2 /* Errors.swift */; };
+		BF0665B21FB7D4E3009B82FA /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD371F9BDE7900A9EBF2 /* Protocols.swift */; };
+		BF0665B31FB7D4E5009B82FA /* VersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AEBCC3227DE7C4F5256001239C53 /* VersionNumber.swift */; };
 		BFF1AD301F93A19200A9EBF2 /* URL+AppStoreLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD2F1F93A19200A9EBF2 /* URL+AppStoreLookup.swift */; };
 		BFF1AD361F9BDE2900A9EBF2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD351F9BDE2900A9EBF2 /* Errors.swift */; };
 		BFF1AD381F9BDE7900A9EBF2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1AD371F9BDE7900A9EBF2 /* Protocols.swift */; };
@@ -393,6 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0665B21FB7D4E3009B82FA /* Protocols.swift in Sources */,
+				BF0665B11FB7D4E1009B82FA /* Errors.swift in Sources */,
+				BF0665AE1FB7D4D7009B82FA /* AppStoreLookupResultParser.swift in Sources */,
+				BF0665B31FB7D4E5009B82FA /* VersionNumber.swift in Sources */,
+				BF0665B01FB7D4DD009B82FA /* URL+AppStoreLookup.swift in Sources */,
+				BF0665AF1FB7D4D9009B82FA /* AppStoreVersionNumberLookup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
