@@ -770,6 +770,7 @@
 				BF0665AC1FB7D451009B82FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
