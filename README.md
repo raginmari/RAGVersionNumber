@@ -3,6 +3,7 @@
 [![CI Status](http://img.shields.io/travis/raginmari/RAGVersionNumber.svg?style=flat)](https://travis-ci.org/raginmari/RAGVersionNumber)
 [![codecov](https://codecov.io/gh/raginmari/RAGVersionNumber/branch/master/graph/badge.svg)](https://codecov.io/gh/raginmari/RAGVersionNumber)
 [![Version](https://img.shields.io/cocoapods/v/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
 [![Platform](https://img.shields.io/cocoapods/p/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
 
