@@ -9,7 +9,7 @@
 
 ⛔️DEPRECATED
 
-This repository has been deprecated and is (obviously) no longer in active development. The reason is that that version 1.0 had been released prematurely and I intend to set up a new with proper version handling. The decision was influenced by the fact that the library has neither stars nor forks.
+This repository has been deprecated and is (obviously) no longer in active development. The reason is that that version 1.0 had been released prematurely and I intend to set up a new project with proper version handling. The decision was influenced by the fact that the library has neither stars nor forks.
 
 ## Example
 
