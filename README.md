@@ -7,6 +7,10 @@
 [![License](https://img.shields.io/cocoapods/l/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
 [![Platform](https://img.shields.io/cocoapods/p/RAGVersionNumber.svg?style=flat)](http://cocoapods.org/pods/RAGVersionNumber)
 
+⛔️DEPRECATED
+
+This repository has been deprecated and is (obviously) no longer in active development. The reason is that that version 1.0 had been released prematurely and I intend to set up a new with proper version handling. The decision was influenced by the fact that the library has neither stars nor forks.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
